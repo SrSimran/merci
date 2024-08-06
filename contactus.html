@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci</title>
+    <!-- bootstrap 5 CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- bootstrap icon CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Navbar Jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- SLICK SLIDER Jquery CSS -->
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick.css">
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick-theme.css">
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="1CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="1CSS/owl.theme.green.min.css">
+    <link rel="stylesheet" href="./1CSS/index.css">
+</head>
+<style>
+    .get_in_touch {
+        display: flex;
+        max-width: 800px;
+        height: 80vh;
+        position: relative;
+        box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .get_in_touch .contact-title {
+        text-transform: uppercase;
+        text-align: center;
+        letter-spacing: 3px;
+        font-size: 3em;
+        line-height: 48px;
+        padding-bottom: 20px;
+        color: #5543ca;
+        background: linear-gradient(to right, #f4524d 0%, #5543ca 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .contact-form .form-field {
+        margin: 15px 0;
+        text-align: -webkit-center;
+    }
+
+    .contact-form .contact-input-text {
+        border-width: 0 0 2px 0;
+        border-color: #5543ca;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+    }
+
+    .contact-form .contact-input-text:focus {
+        outline: none;
+    }
+
+    .contact-form .contact-label {
+        position: absolute;
+        left: 20px;
+        bottom: 11px;
+        font-size: 18px;
+        line-height: 26px;
+        font-weight: 400;
+        color: #5543ca;
+        cursor: text;
+        text-transform: capitalize;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .contact-form .contact-submitbtn {
+        display: inline-block;
+        background-image: linear-gradient(125deg, #a72879, #064497);
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 16px;
+        padding: 8px 16px;
+        border: none;
+        width: 200px;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <!-- ==========NAVIGATION=========== -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand d-flex justify-content-between align-items-center order-lg-0">
+                <img src="./image/logo.png" alt="">
+            </a>
+            <div class="order-lg-2 d-flex">
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" href="./register.html"><i class="bi bi-person-fill"></i></a>
+                    <span class="position-absolute top-0 start-100 translate-middle badge"></span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" href="./wishlist.html"><i class="bi bi-heart"></i></i></a>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="bi bi-cart-fill" id="cart-icon" data-quantity="0"></i>
+                    <div class="cart">
+                        <h2 class="cart-title">Your Cart</h2>
+                        <!-- Content -->
+                        <div class="cart-content"></div>
+                        <!-- Total -->
+                        <div class="total">
+                            <div class="total-title">Total:</div>
+                            <div class="total-price">$0</div>
+                        </div>
+                        <a href="./register.html" class="text-decoration-none">
+                            <div type="button" class="btn-buy">Pay Now</div>
+                        </a>
+                        <i class="bi bi-x" id="close-cart"></i>
+
+                    </div>
+
+                </button>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item dropdown dropdown-mega position-static">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                            Apparel
+                        </a>
+                        <div class="dropdown-menu shadow">
+                            <div class="mega-content px-md-4">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./men.html" class="apparel-title">Men's Collections</a>
+                                            <div class="list-group">
+                                                <a href="./men.html" class="list-group-item">Top Wear</a>
+                                                <a href="./men.html" class="list-group-item">Bottom Wear</a>
+                                                <a href="./men.html" class="list-group-item">Fashion Accessories</a>
+                                                <a href="./men.html" class="list-group-item">Indian & Festive Wear</a>
+                                                <a href="./men.html" class="list-group-item">Inner wear & Sleep Wear</a>
+                                                <a href="./men.html" class="list-group-item">Personal care &
+                                                    Grooming</a>
+                                                <a href="./men.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./women.html" class="apparel-title">Women Collections</a>
+                                            <div class="list-group">
+                                                <a href="./women.html" class="list-group-item">Indian & Fushion Wear</a>
+                                                <a href="./women.html" class="list-group-item">Western Wear</a>
+                                                <a href="./women.html" class="list-group-item">Maternity</a>
+                                                <a href="./women.html" class="list-group-item">Lingerie & Sleepover</a>
+                                                <a href="./women.html" class="list-group-item">Beauty & Personal
+                                                    Care</a>
+                                                <a href="./women.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./kids.html" class="apparel-title">Kids Collections</a>
+                                            <div class="list-group">
+                                                <a href="./kids.html" class="list-group-item">Boys Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Girls Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Infants</a>
+                                                <a href="./kids.html" class="list-group-item">Kids Accessories</a>
+                                                <a href="./kids.html" class="list-group-item">Toys</a>
+                                                <a href="./kids.html" class="list-group-item">Home & Bath</a>
+                                                <a href="./kids.html" class="list-group-item">Personal Care</a>
+                                                <a href="./kids.html" class="list-group-item">Foot Wear</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./lifestyle.html">Lifestyle</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./mobile.html">Mobiles</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./appliances.html">Appliances</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./Electronics.html">Electronics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ======================CONTACT US================ -->
+    <section id="contactus" class="get_in_touch container mt-5 pt-5">
+        <h1 class="contact-title"> get in touch</h1>
+
+        <form action="https://api.web3forms.com/submit" method="POST" class="container">
+            <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE"> -->
+            <div class="contact-form row">
+                <div class="form-field form-floating col-md-6 col-lg-6" style="display: none;">
+                    <input type="hidden" name="access_key" value="59ded257-3d78-4f3f-bea9-89d593ef2d0f">
+                </div>
+                <div class="form-field form-floating col-md-6 col-lg-6">
+                    <input type="text" id="name" class="contact-input-text form-control" name="name" placeholder="Enter your name">
+                    <label for="name" class="contact-label">name</label>
+                </div>
+
+                <div class="form-field form-floating col-md-6 col-lg-6">
+                    <input type="email" id="email" class="contact-input-text form-control" name="email"
+                        placeholder="Enter your email">
+                    <label for="email" class="contact-label">email</label>
+                </div>
+
+                <div class="form-field form-floating col-md-12 col-lg-12">
+                    <input type="text" id="message" class="contact-input-text form-control" name="message"
+                        placeholder="Enter your message">
+                    <label for="message" class="contact-label">Message</label>
+                </div>
+
+                <div class="form-field form-floating col-md-12 col-lg-12">
+                    <input type="submit" value="submit" id="message" class="contact-submitbtn" name="">
+                </div>
+            </div>
+        </form>
+    </section>
+    <!-- ---------------FOOTER SECTION--------------------------->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <a href="./index.html" class="logo"><img src="./image/logo.png" alt=""></a>
+
+                <div class="col">
+                    <h4>Contact</h4>
+                    <p><strong>Address:</strong>XYZ</p>
+                    <p><strong>Phone:</strong>2345678</p>
+                    <p><strong>Hours:</strong>xyz</p>
+                    <div class="follow">
+                        <h4>Follow Us</h4>
+                        <div class="icon">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>About</h4>
+                    <a href="./aboutUs.html"> About Us</a>
+                    <a href="./aboutUs.html">Delivery Information</a>
+                    <a href="./aboutUs.html">Privacy Policy</a>
+                    <a href="./aboutUs.html">Terms & Conditions</a>
+                    <a href="./contactus.html">Contact Us</a>
+                </div>
+                <div class="col">
+                    <h4>My Account</h4>
+                    <a href="./register.html">Sign in</a>
+                    <p id="viewCart">View Cart</p>
+                    <a href="">My Wishlist</a>
+                    <a href="">Track My Order</a>
+                </div>
+                <div class="col">
+                    <h4>Help</h4>
+                    <a href="./help.html">Payments</a>
+                    <a href="./help.html">Shipping</a>
+                    <a href="./help.html">Cancellations & Returns</a>
+                    <a href="./help.html">FAQ</a>
+                    <a href="./help.html">Report Infringement</a>
+                </div>
+                <div class="col">
+                    <h4>Install App</h4>
+                    <p>Free App Store or Google Play</p>
+                    <div class="app">
+                        <img src="./image/app1.png " alt="">
+                    </div>
+                    <p>Secured Payment Gateways</p>
+                    <img src="./image/pay.png" class="pay" alt="">
+                </div>
+                <div class="copyright">
+                    <p class=" text-align-center">© 2023 Merci.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- -------------------------JS FILEs --------------------->
+    <script src="./1JS/index.js"></script>
+    <script src="1JS/jquery-3.6.4.min.js"></script>
+    <script src="1JS/slick.min.js"></script>
+    <script src="1JS/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

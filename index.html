@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci</title>
+    <!-- bootstrap 5 CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- bootstrap icon CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Navbar Jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- SLICK SLIDER Jquery CSS -->
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick.css">
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick-theme.css">
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="1CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="1CSS/owl.theme.green.min.css">
+    <link rel="stylesheet" href="./1CSS/index.css">
+</head>
+
+<body>
+    <!-- ==========NAVIGATION=========== -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand d-flex justify-content-between align-items-center order-lg-0">
+                <img src="./image/logo.png" alt="">
+            </a>
+            <div class="order-lg-2 d-flex">
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" href="./register.html"><i class="bi bi-person-fill"></i></a>
+                    <span class="position-absolute top-0 start-100 translate-middle badge"></span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" href="./wishlist.html"><i class="bi bi-heart"></i></i></a>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="bi bi-cart-fill" id="cart-icon" data-quantity="0"></i>
+                    <div class="cart">
+                        <h2 class="cart-title">Your Cart</h2>
+                        <!-- Content -->
+                        <div class="cart-content"></div>
+                        <!-- Total -->
+                        <div class="total">
+                            <div class="total-title">Total:</div>
+                            <div class="total-price">$0</div>
+                        </div>
+                        <a href="./register.html" class="text-decoration-none">
+                            <div type="button" class="btn-buy">Pay Now</div>
+                        </a>
+                        <i class="bi bi-x" id="close-cart"></i>
+
+                    </div>
+
+                </button>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item dropdown dropdown-mega position-static">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                            Apparel
+                        </a>
+                        <div class="dropdown-menu shadow">
+                            <div class="mega-content px-md-4">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./men.html" class="apparel-title">Men's Collections</a>
+                                            <div class="list-group">
+                                                <a href="./men.html" class="list-group-item">Top Wear</a>
+                                                <a href="./men.html" class="list-group-item">Bottom Wear</a>
+                                                <a href="./men.html" class="list-group-item">Fashion Accessories</a>
+                                                <a href="./men.html" class="list-group-item">Indian & Festive Wear</a>
+                                                <a href="./men.html" class="list-group-item">Inner wear & Sleep Wear</a>
+                                                <a href="./men.html" class="list-group-item">Personal care &
+                                                    Grooming</a>
+                                                <a href="./men.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./women.html" class="apparel-title">Women Collections</a>
+                                            <div class="list-group">
+                                                <a href="./women.html" class="list-group-item">Indian & Fushion Wear</a>
+                                                <a href="./women.html" class="list-group-item">Western Wear</a>
+                                                <a href="./women.html" class="list-group-item">Maternity</a>
+                                                <a href="./women.html" class="list-group-item">Lingerie & Sleepover</a>
+                                                <a href="./women.html" class="list-group-item">Beauty & Personal
+                                                    Care</a>
+                                                <a href="./women.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./kids.html" class="apparel-title">Kids Collections</a>
+                                            <div class="list-group">
+                                                <a href="./kids.html" class="list-group-item">Boys Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Girls Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Infants</a>
+                                                <a href="./kids.html" class="list-group-item">Kids Accessories</a>
+                                                <a href="./kids.html" class="list-group-item">Toys</a>
+                                                <a href="./kids.html" class="list-group-item">Home & Bath</a>
+                                                <a href="./kids.html" class="list-group-item">Personal Care</a>
+                                                <a href="./kids.html" class="list-group-item">Foot Wear</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./lifestyle.html">Lifestyle</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./mobile.html">Mobiles</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./appliances.html">Appliances</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./Electronics.html">Electronics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ==========CAROUSEL============ -->
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3"
+                aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4"
+                aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="10000">
+                <img src="image/outfit1.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="image/outfit2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="image/outfit3.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="image/outfit4.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="image/s1.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ---------OUR SERVICES---------- -->
+    <div class="col-12 text-center mt-5">
+        <h1 class="text-dark pt-4">OUR SERVICES</h1>
+        <div class="border-top border-primary w-25 mx-auto my-3"></div>
+    </div>
+
+
+    <!-- THREE COLUMN SECTION -->
+    <div class="container">
+        <div class="row my-5">
+            <div class="col-lg-2 col-md-3 col-sm-6 my-2">
+                <div class="card">
+                    <img src="image/card1.jfif" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text" style="color:#196163">Free Shipping</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-6 my-2">
+                <div class="card">
+                    <img src="image/card2.png" class="card-img-top" alt="..." style="height: 194px" ;>
+                    <div class="card-body">
+                        <p class="card-text" style="color: #52810a;">Online Order</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-3 col-sm-6 my-2">
+                <div class="card">
+                    <img src="image/card4.png" class="card-img-top" alt="..."
+                        style="height: 194px; background-color: #d5e8ce;">
+                    <div class="card-body">
+                        <p class="card-text" style="color: #912421;">Quality Check</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 my-2">
+                <div class="card">
+                    <img src="image/card5.png" class="card-img-top" alt="..." style="height: 194px;">
+                    <div class="card-body">
+                        <p class="card-text" style="color: chocolate;">Value for Money</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 my-2">
+                <div class="card">
+                    <img src="image/card3.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text" style="color:#5b0964">Happy Sell</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-3 col-sm-6 my-2">
+                <div class="card">
+                    <img src="image/card6.png" class="card-img-top" alt="..."
+                        style="height: 198px; background-color: #d2eded;">
+                    <div class="card-body">
+                        <p class="card-text" style="color:#4e0f71">24x7 Support</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- --------------BRAND BACKGROUND------------------ -->
+    <div class="brand-background">
+        <div class="row py-5">
+            <div class="col-12">
+                <h2>BEST OF EXCLUSIVE BRANDS</h2>
+            </div>
+        </div>
+        <div class="brand-wrap">
+            <div class="brand">
+                <div class="img-fluid">
+                    <img src="image/brand1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- -------------------TOP PICKS ---------------------- -->
+    <section id="picks" class="py-5">
+        <div class="container">
+            <div class="picks-title text-center">
+                <h2 class="position-relative d-inline-block">TOP PICKS</h2>
+            </div>
+            <div id="row">
+                <div class="picks-list-slider mt-4 row">
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="picks-img">
+                            <img src="image/p1.jpg" alt="..." class="w-100">
+                        </div>
+                        <div class="picks-des">
+                            <h5 class="picks-brand">Kurta Sets</h5>
+                            <p class="picks-off">50% Off</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- --------------BEST SELLER----------------------- -->
+    <section id="best-collection" class="py-5">
+        <div class="container">
+            <div class="collection-title text-center">
+                <h2 class="position-relative d-inline-block">BEST SELLERS</h2>
+            </div>
+            <div id="row">
+                <div class="best-collection-list slider mt-4 row">
+                    <div class=" col-md-6 col-lg-4 col-xl-3 p-2">
+                        <div class="best-collection-img">
+                            <img src="image/f1.png" alt="..." class="w-100">
+                        </div>
+                        <div class="">
+                            <h5 class="flip-box-header text-uppercase">xyz</h5>
+                            <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <h1 class="amount">$20</h1>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"> </i>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="best-collection-img">
+                            <img src="image/f1.png" alt="..." class="w-100">
+                        </div>
+                        <div class="">
+                            <h5 class="flip-box-header text-uppercase">xyz</h5>
+                            <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <h1 class="amount">$20</h1>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"> </i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="best-collection-img">
+                            <img src="image/f1.png" alt="..." class="w-100">
+                        </div>
+                        <div class="">
+                            <h5 class="flip-box-header text-uppercase">xyz</h5>
+                            <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <h1 class="amount">$20</h1>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"> </i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="best-collection-img">
+                            <img src="image/f1.png" alt="..." class="w-100">
+                        </div>
+                        <div class="">
+                            <h5 class="flip-box-header text-uppercase">xyz</h5>
+                            <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <h1 class="amount">$20</h1>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"> </i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="best-collection-img">
+                            <img src="image/f1.png" alt="..." class="w-100">
+                        </div>
+                        <div class="">
+                            <h5 class="flip-box-header text-uppercase">xyz</h5>
+                            <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <h1 class="amount">$20</h1>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"> </i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="best-collection-img">
+                            <img src="image/f1.png" alt="..." class="w-100">
+                        </div>
+                        <div class="">
+                            <h5 class="flip-box-header text-uppercase">xyz</h5>
+                            <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <h1 class="amount">$20</h1>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"> </i>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="best-collection-img">
+                            <img src="image/f1.png" alt="..." class="w-100">
+                        </div>
+                        <div class="">
+                            <h5 class="flip-box-header text-uppercase">xyz</h5>
+                            <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <h1 class="amount">$20</h1>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"> </i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 col-xl-3 p-2 ">
+                        <div class="best-collection-img">
+                            <img src="image/f1.png" alt="..." class="w-100">
+                        </div>
+                        <div class="">
+                            <h5 class="flip-box-header text-uppercase">xyz</h5>
+                            <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                            <div class="rating">
+                                <h1 class="amount">$20</h1>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"> </i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- ----------------------WOMEN TRENDS---------------------- -->
+    <section id="Women-collection">
+        <div class="col-12 text-center-line mt-5">
+            <h1 class="text-animation pt-4">Women Collections</h1>
+        </div>
+        <div class="container ">
+            <div class="row">
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="https://www.textileinfomedia.com/img/dlaz/multi-color-designer-one-piece-dress-full.jpg"
+                                class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="image/f2.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">abc</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/f2.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/f2.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+    </section>
+    <!-- ----------------------MEN TRENDS--------------------- -->
+    <section id="men-collection">
+        <div class="col-12 text-center-line mt-5">
+            <h1 class="text-animation pt-4">Men Collections</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/f1.png"
+                                class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/f1.png" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">abc</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/f1.png" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/f1.png" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- -----------------TRENDS FOR KIDS -------------------- -->
+    <section id="kids-collection">
+        <div class="col-12 text-center-line mt-5">
+            <h1 class="text-animation pt-4">Kids Collections</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/k8.jpg"
+                                class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/k8.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">abc</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/k8.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/k8.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- -----------------------HOME AND DECOR ------------------------->
+    <section id="home-collection">
+        <div class="col-12 text-center-line mt-5">
+            <h1 class="text-animation pt-4">HOME AND DECOR </h1>
+        </div>
+        <div class="container">
+            <div class="row">
+               <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/h.jpg"
+                                class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/h.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">abc</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/h.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/h.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- ===============================MOBILE==================== -->
+
+    <section id="mobile-collection">
+        <div class="col-12 text-center-line mt-5">
+            <h1 class="text-animation pt-4">mobile phones </h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/m5.jpg"
+                                class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/m5.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">abc</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/m5.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/m5.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ===============================ELECTRONICS==================== -->
+    <section id="electronics-collection">
+        <div class="col-12 text-center-line mt-5">
+            <h1 class="text-animation pt-4">everyday electronics </h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/e2.jpg"
+                                class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/e2.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">abc</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/e2.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/e2.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===============================APPLIANCES==================== -->
+    <section id="appliances-collection">
+        <div class="col-12 text-center-line mt-5">
+            <h1 class="text-animation pt-4">home appliances</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/a1.jpg"
+                                class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/a1.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">abc</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/a1.jpg" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+                <div class="box-item Women-collection col-sm-6 col-md-6 col-lg-4 col-xl-3 p-2">
+                    <div class="flip-box Women-collection">
+                        <div class="flip-box-front Women-collection">
+                            <img src="./image/a1.png" class="card-img-top product-img" alt="...">
+                            <div class="inner colo-white Women-collection">
+                                <h5 class="flip-box-header text-uppercase product-title">xyz</h5>
+                                <p class="description text-capitalize">Lorem ipsum dolor sit amet.</p>
+                                <div class="rating">
+                                    <h1 class="amount price">$20</h1>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"> </i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flip-box-back Women-collection text-center">
+                            <h6>Product info</h6>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Alias.</p>
+                            <div class="icon">
+                                <i class="bi bi-facebook"></i>
+                                <i class="bi bi-instagram"></i>
+                                <i class="bi bi-twitter"></i>
+                                <i class="bi bi-whatsapp"></i>
+                            </div>
+                            <button class="flip-box-button add-cart">Add to Cart</button>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </section>
+    <!-- ----------------------CUSTOMER REVIEWS---------------------->
+    <section id="customer-reviews">
+        <div class="reviews">
+            <h1>Our Customer Reviews</h1>
+        </div>
+        <div class="box-container">
+            <div class="review-slider owl-carousel owl-theme">
+                <div class="box item">
+                    <div class="comment">
+                        <p class="comment-paragraph"><i class="bi bi-quote"></i>Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit.
+                            Accusamus voluptatum doloremque nihil qu.</p>
+                        <h3>--Name</h3>
+                    </div>
+                    <div class="review-image">
+                        <img src="image/r4.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="box item">
+                    <div class="comment">
+                        <p class="comment-paragraph"><i class="bi bi-quote"></i>Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit.
+                            Accusamus voluptatum doloremque nihil quo</p>
+                        <h3>--Name</h3>
+                    </div>
+                    <div class="review-image">
+                        <img src="image/r2.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="box item">
+                    <div class="comment">
+                        <p class="comment-paragraph"><i class="bi bi-quote"></i>Lorem ipsum dolor, sit amet consectetur
+                            adipisicing elit.
+                            Accusamus voluptatum doloremque nihil quo</p>
+                        <h3>--Name</h3>
+                    </div>
+                    <div class="review-image">
+                        <img src="image/r3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ---------------FOOTER SECTION--------------------------->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <a href="./index.html" class="logo"><img src="./image/logo.png" alt=""></a>
+
+                <div class="col">
+                    <h4>Contact</h4>
+                    <p><strong>Address:</strong>XYZ</p>
+                    <p><strong>Phone:</strong>2345678</p>
+                    <p><strong>Hours:</strong>xyz</p>
+                    <div class="follow">
+                        <h4>Follow Us</h4>
+                        <div class="icon">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>About</h4>
+                    <a href="./aboutUs.html"> About Us</a>
+                    <a href="./aboutUs.html">Delivery Information</a>
+                    <a href="./aboutUs.html">Privacy Policy</a>
+                    <a href="./aboutUs.html">Terms & Conditions</a>
+                    <a href="./contactus.html">Contact Us</a>
+                </div>
+                <div class="col">
+                    <h4>My Account</h4>
+                    <a href="./register.html">Sign in</a>
+                    <p id="viewCart">View Cart</p>
+                    <a href="">Track My Order</a>
+                </div>
+                <div class="col">
+                    <h4>Help</h4>
+                    <a href="./help.html">Payments</a>
+                    <a href="./help.html">Shipping</a>
+                    <a href="./help.html">Cancellations & Returns</a>
+                    <a href="./help.html">FAQ</a>
+                    <a href="./help.html">Report Infringement</a>
+                </div>
+                <div class="col">
+                    <h4>Install App</h4>
+                    <p>Free App Store or Google Play</p>
+                    <div class="app">
+                        <img src="./image/app1.png " alt="">
+                    </div>
+                    <p>Secured Payment Gateways</p>
+                    <img src="./image/pay.png" class="pay" alt="">
+                </div>
+                <div class="copyright">
+                    <p class=" text-align-center">© 2023 Merci.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- -------------------------JS FILEs --------------------->
+    <script src="./1JS/index.js"></script>
+    <script src="1JS/jquery-3.6.4.min.js"></script>
+    <script src="1JS/slick.min.js"></script>
+    <script src="1JS/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <!-- Slick Slider Jquery file-->
+</body>
+
+</html>

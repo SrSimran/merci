@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci - Payment</title>
+    <!-- bootstrap 5 CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- bootstrap icon CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Navbar Jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- SLICK SLIDER Jquery CSS -->
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick.css">
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick-theme.css">
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="1CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="1CSS/owl.theme.green.min.css">
+    <link rel="stylesheet" href="1CSS/index.css">
+
+</head>
+<style>
+    @media (max-width: 380px) {
+    .navbar-brand img {
+        height: 30px;
+        width: 50px;
+        
+    }
+    a.navbar-brand{
+        margin: 0;
+    }
+    .navbar-toggler{
+        padding: .025rem .30rem;
+    }
+}
+    #loggedUsername {
+        margin-right: 5px;
+        color: purple;
+        font-weight: 500;
+    }
+
+    .bi-box-arrow-right {
+
+        color: purple;
+        font-weight: 500;
+    }
+    #checkoutform *{
+        transition: all .2s linear;
+    }
+    .form-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 25px;
+        min-height: 100vh;
+        padding-bottom: 70px;
+    }
+    .form-container form{
+        padding: 20px;
+        width: 800px;
+        background: #f7f0f0;
+        box-shadow: 0px 5px 10px rgba(24, 22, 22, 0.1);
+    }
+    .form-container form .row{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+   .checkout-title{
+        font-size: 20px;
+        color:#500A5C;
+        font-weight: 700;
+        padding-bottom: 5px;
+        text-transform: uppercase!important;
+    }
+    .inputBox{
+       margin: 15px 0; 
+    }
+    .inputBox span{
+        margin-bottom: 5px;
+        display: block;
+        color:#500A5C;
+        font-weight: 500;
+    }
+    .inputBox span i{
+        padding: 0 5px;
+    }
+    .inputBox input{
+        width: 100%;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        padding: 10px 15px;
+        font-size: 15px;
+        text-transform: none;
+    }
+    .inputBox input:focus {
+        border: 1px solid purple!important;
+    }
+    .inputBox button{
+        width: 100%;
+        border-radius: 8px;
+        padding: 10px 15px;
+        font-size: 15px;
+        background-color: #500A5C;
+        color: wheat;
+        font-weight: 700;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand d-flex justify-content-between align-items-center order-lg-0">
+                <img src="./image/logo.png" alt="">
+            </a>
+            <div class="order-lg-2 d-flex">
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" id="logoutbtn" href="./register.html"><span id="loggedUsername"></span><i
+                            class="bi bi-box-arrow-right"></i></a>
+                    <span class="position-absolute top-0 start-100 translate-middle badge"></span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" href="./wishlist.html"><i class="bi bi-heart"></i></i></a>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="bi bi-cart-fill" id="cart-icon" data-quantity="0"></i>
+                    <div class="cart">
+                        <h2 class="cart-title">Your Cart</h2>
+                        <!-- Content -->
+                        <div class="cart-content"></div>
+                        <!-- Total -->
+                        <div class="total">
+                            <div class="total-title">Total:</div>
+                            <div class="total-price">$0</div>
+                        </div>
+                        <a href="./payment.html" class="text-decoration-none">
+                            <div type="button" class="btn-buy" id="rzp-button1">Pay Now</div>
+                        </a>
+                        <i class="bi bi-x" id="close-cart"></i>
+
+                    </div>
+
+                </button>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item dropdown dropdown-mega position-static">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                            Apparel
+                        </a>
+                        <div class="dropdown-menu shadow">
+                            <div class="mega-content px-md-4">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./men.html" class="apparel-title">Men's Collections</a>
+                                            <div class="list-group">
+                                                <a href="./men.html" class="list-group-item">Top Wear</a>
+                                                <a href="./men.html" class="list-group-item">Bottom Wear</a>
+                                                <a href="./men.html" class="list-group-item">Fashion Accessories</a>
+                                                <a href="./men.html" class="list-group-item">Indian & Festive Wear</a>
+                                                <a href="./men.html" class="list-group-item">Inner wear & Sleep Wear</a>
+                                                <a href="./men.html" class="list-group-item">Personal care &
+                                                    Grooming</a>
+                                                <a href="./men.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./women.html" class="apparel-title">Women Collections</a>
+                                            <div class="list-group">
+                                                <a href="./women.html" class="list-group-item">Indian & Fushion Wear</a>
+                                                <a href="./women.html" class="list-group-item">Western Wear</a>
+                                                <a href="./women.html" class="list-group-item">Maternity</a>
+                                                <a href="./women.html" class="list-group-item">Lingerie & Sleepover</a>
+                                                <a href="./women.html" class="list-group-item">Beauty & Personal
+                                                    Care</a>
+                                                <a href="./women.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./kids.html" class="apparel-title">Kids Collections</a>
+                                            <div class="list-group">
+                                                <a href="./kids.html" class="list-group-item">Boys Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Girls Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Infants</a>
+                                                <a href="./kids.html" class="list-group-item">Kids Accessories</a>
+                                                <a href="./kids.html" class="list-group-item">Toys</a>
+                                                <a href="./kids.html" class="list-group-item">Home & Bath</a>
+                                                <a href="./kids.html" class="list-group-item">Personal Care</a>
+                                                <a href="./kids.html" class="list-group-item">Foot Wear</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./lifestyle.html">Lifestyle</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./mobile.html">Mobiles</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./appliances.html">Appliances</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./Electronics.html">Electronics</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CHECKOUT FORM -->
+    <main id="checkoutform">
+        <div class="container form-container mt-5">
+            <form method="post">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="checkout-title text-center">Checkout Page</h3>
+
+                        <div class="inputBox">
+                            <span><i class="bi bi-person-fill"></i>Full Name</span>
+                            <input type="text" placeholder="Enter your full name" name="name" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <span><i class="bi bi-envelope-fill"></i>Email</span>
+                            <input type="email" placeholder="Enter your email address" name="email" required>
+                        </div>
+
+                        <div class="inputBox">
+                            <span><i class="bi bi-phone-fill"></i>Mobile</span>
+                            <input type="number" placeholder="Enter your phone number" name="phonenumber" required>
+                        </div>
+                        <div class="inputBox">
+                            <span><i class="bi bi-geo-alt-fill"></i>Address</span>
+                            <input type="text" placeholder="Enter your address" name="address" required>
+                        </div>
+                        <div class="inputBox col-12">
+                            <button id="viewCart" >Pay Now</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- FOOTER  -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <a href="./index.html" class="logo"><img src="./image/logo.png" alt=""></a>
+
+                <div class="col">
+                    <h4>Contact</h4>
+                    <p><strong>Address:</strong>XYZ</p>
+                    <p><strong>Phone:</strong>2345678</p>
+                    <p><strong>Hours:</strong>xyz</p>
+                    <div class="follow">
+                        <h4>Follow Us</h4>
+                        <div class="icon">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>About</h4>
+                    <a href="./aboutUs.html"> About Us</a>
+                    <a href="./aboutUs.html">Delivery Information</a>
+                    <a href="./aboutUs.html">Privacy Policy</a>
+                    <a href="./aboutUs.html">Terms & Conditions</a>
+                    <a href="./contactus.html">Contact Us</a>
+                </div>
+                <div class="col">
+                    <h4>My Account</h4>
+                    <a href="./register.html">Sign in</a>
+                    <a href="">View Cart</a>
+                </div>
+                <div class="col">
+                    <h4>Help</h4>
+                    <a href="./help.html">Payments</a>
+                    <a href="./help.html">Shipping</a>
+                    <a href="./help.html">Cancellations & Returns</a>
+                    <a href="./help.html">FAQ</a>
+                    <a href="./help.html">Report Infringement</a>
+                </div>
+               
+                <div class="col">
+                    <h4>Install App</h4>
+                    <p>Free App Store or Google Play</p>
+                    <div class="app">
+                        <img src="./image/app1.png " alt="">
+                    </div>
+                    <p>Secured Payment Gateways</p>
+                    <img src="./image/pay.png" class="pay" alt="">
+                </div>
+                <div class="copyright">
+                    <p class=" text-align-center">© 2023 Merci.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/Javascript">
+    function preventBack() { window.history.forward() };
+        setTimeout("preventBack()", 0);
+        window.onunload = function () { null };
+</script>
+<!-- <button id="rzp-button1">Pay</button> -->
+    <script src="1JS/index.js"></script>
+    <script src="1JS/jquery-3.6.4.min.js"></script>
+    <script src="1JS/slick.min.js"></script>
+    <script src="1JS/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+        import { getFirestore, getDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyC7Gw1GRBOAGTxVOeG3uYALVPSEmsyqAQA",
+            authDomain: "merci-login-signup.firebaseapp.com",
+            projectId: "merci-login-signup",
+            storageBucket: "merci-login-signup.appspot.com",
+            messagingSenderId: "108670889583",
+            appId: "1:108670889583:web:cdd4a7983a6e4ddea4a79a"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        const auth = getAuth();
+        const db = getFirestore();
+
+        onAuthStateChanged(auth, (user) => {
+            const loggedInUserId = localStorage.getItem("loggedInUserId");
+            if (loggedInUserId) {
+                const userRef = doc(db, "users", loggedInUserId);
+                getDoc(userRef) // Use userRef here
+                    .then((docSnap) => {
+                        if (docSnap.exists()) {
+                            const userData = docSnap.data();
+                            document.getElementById("loggedUsername").innerText = userData.username; // Corrected assignment
+                        }
+                        else {
+                            console.log("No such document!");
+                        }
+                    })
+                    .catch((error) => {
+                        console.error("error getting document");
+                    })
+            }
+            else {
+                console.log("User is not found in local storage");
+            }
+        })
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoutbtn = document.getElementById("logoutbtn");
+            logoutbtn.addEventListener("click", () => {
+                localStorage.removeItem("loggedInUserId");
+                signOut(auth)
+                    .then(() => {
+                        window.location.href = "register.html";
+
+
+                    })
+                    .catch((error) => {
+                        console.error("error signing out", error);
+                    })
+            });
+        });
+
+
+    </script>
+
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+  var options = {
+    "key": "rzp_test_yYsMUN4G9gmimA", // Enter the Key ID generated from the Dashboard
+    "amount": "2000",
+    "currency": "USD",
+    "description": "Merci",
+    "image": "./image/logo.png",
+    "prefill":
+    {
+      "email": " ;",
+      "phonenumber": " ;",
+    },
+    config: {
+      display: {
+        blocks: {
+          utib: { //name for Axis block
+            name: "Pay using Axis Bank",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["UTIB"]
+              },
+              {
+                method: "netbanking",
+                banks: ["UTIB"]
+              },
+            ]
+          },
+          other: { //  name for other block
+            name: "Other Payment modes",
+            instruments: [
+              {
+                method: "card",
+                issuers: ["ICIC"]
+              },
+              {
+                method: 'netbanking',
+              },
+              {
+          method: "upi"
+          }
+            ]
+          }
+        },
+        
+        sequence: ["block.utib", "block.other"],
+        preferences: {
+          show_default_blocks: false // Should Checkout show its default blocks?
+        }
+      }
+    },
+    "handler": function (response) {
+      alert(response.razorpay_payment_id);
+    },
+    "modal": {
+      "ondismiss": function () {
+        if (confirm("Are you sure, you want to close the form?")) {
+          txt = "You pressed OK!";
+          console.log("Checkout form closed by the user");
+        } else {
+          txt = "You pressed Cancel!";
+          console.log("Complete the Payment")
+        }
+      }
+    }
+  };
+  var rzp1 = new Razorpay(options);
+  document.getElementById('rzp-button1').onclick = function (e) {
+    rzp1.open();
+    e.preventDefault();
+  }
+</script>
+</html>
+
+</body>
+
+</html>

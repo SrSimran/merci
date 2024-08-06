@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 70vh;
+    }
+
+    .container {
+        margin: 20px;
+        padding: 10px;
+        font-weight: 800;
+        font-size: 2rem;
+        color: purple;
+        text-align: center;
+
+
+    }
+
+    .container button {
+        width: 200px;
+        height: 50px;
+        margin: 10px;
+        border: 10px;
+        font-size: 1.5rem;
+        font-weight: 600;
+        box-shadow: 7.5px 7.5px 7.5px rgba(100, 72, 72, 0.237);
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h3>Make Your Payment !!!</h3>
+        <button id="rzp-button1">Pay Now</button>
+
+    </div>
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        var options = {
+            "key": "rzp_test_yYsMUN4G9gmimA", // Enter the Key ID generated from the Dashboard
+            "amount": " 2000",
+            "currency": "USD",
+            "description": "Merci",
+            "image": "./image/logo.png",
+            "prefill":
+            {
+                "email": " ;",
+                "phonenumber": " ;",
+            },
+            config: {
+                config: {
+                    display: {
+                        blocks: {
+                            banks: {
+                                name: 'Most Used Methods',
+                                instruments: [
+                                    {
+                                        method: 'wallet',
+                                        wallets: ['freecharge']
+                                    },
+                                    {
+                                        method: 'upi'
+                                    },
+                                ],
+                            },
+                        },
+                        sequence: ['block.banks'],
+                        preferences: {
+                            show_default_blocks: true,
+                        },
+                    },
+                },
+
+            },
+
+
+
+            "handler": function (response) {
+                alert(response.razorpay_payment_id);
+            },
+            "modal": {
+                "ondismiss": function () {
+                    if (confirm("Are you sure, you want to close the form?")) {
+                        txt = "You pressed OK!";
+                        console.log("Checkout form closed by the user");
+                    } else {
+                        txt = "You pressed Cancel!";
+                        console.log("Complete the Payment")
+                    }
+                }
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        document.getElementById('rzp-button1').onclick = function (e) {
+            rzp1.open();
+            e.preventDefault();
+        }
+    </script>
+
+    <!-- <script>
+      var options = {
+        "key": "rzp_test_yYsMUN4G9gmimA", // Enter the Key ID generated from the Dashboard
+        "amount": "2000",
+        "currency": "USD",
+        "description": "Merci",
+        "image": "./image/logo.png",
+        "prefill":
+        {
+          "email": " ;",
+          "phonenumber": " ;",
+        },
+        config: {
+          display: {
+            blocks: {
+              utib: { //name for Axis block
+                name: "Pay using Axis Bank",
+                instruments: [
+                  {
+                    method: "card",
+                    issuers: ["UTIB"]
+                  },
+                  {
+                    method: "netbanking",
+                    banks: ["UTIB"]
+                  },
+                ]
+              },
+              other: { //  name for other block
+                name: "Other Payment modes",
+                instruments: [
+                  {
+                    method: "card",
+                    issuers: ["ICIC"]
+                  },
+                  {
+                    method: 'netbanking',
+                  },
+                  {
+              method: "upi"
+              }
+                ]
+              }
+            },
+            
+            sequence: ["block.utib", "block.other"],
+            preferences: {
+              show_default_blocks: false // Should Checkout show its default blocks?
+            }
+          }
+        },
+        "handler": function (response) {
+          alert(response.razorpay_payment_id);
+        },
+        "modal": {
+          "ondismiss": function () {
+            if (confirm("Are you sure, you want to close the form?")) {
+              txt = "You pressed OK!";
+              console.log("Checkout form closed by the user");
+            } else {
+              txt = "You pressed Cancel!";
+              console.log("Complete the Payment")
+            }
+          }
+        }
+      };
+      var rzp1 = new Razorpay(options);
+      document.getElementById('rzp-button1').onclick = function (e) {
+        rzp1.open();
+        e.preventDefault();
+      }
+    </script> -->
+</body>
+
+</html>

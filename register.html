@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci - Login&SignUp</title>
+    <!-- bootstrap 5 CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- bootstrap icon CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Navbar Jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- SLICK SLIDER Jquery CSS -->
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick.css">
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick-theme.css">
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="1CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="1CSS/owl.theme.green.min.css">
+    <link rel="stylesheet" href="1CSS/index.css">
+
+</head>
+<style>
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+    }
+
+    .form-row {
+        margin-top: 30px;
+        width: 900px;
+        height: 550px;
+        border-radius: 30px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+
+    }
+
+    .side-context {
+        background: linear-gradient(to right, #8290de, rgb(188, 34, 188));
+        color: #fff;
+        position: relative;
+        border-radius: 30px 0 0 30px;
+
+    }
+
+    .main img {
+        width: 100px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+    .side-context-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .side-context-text h1 {
+        font-weight: 600;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    .side-context-text p {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.3px;
+        margin: 20px 0;
+    }
+
+    .side-context-text a {
+        color: gray;
+        font-size: 13px;
+        text-decoration: none;
+        margin: 15px 0 10px;
+    }
+
+    .login-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .input-box {
+        width: 330px;
+        box-sizing: border-box;
+    }
+
+    .input-box header {
+
+        font-weight: 700;
+        text-align: center;
+        margin: 10px auto;
+    }
+
+    .input-field {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding: 0 10px 0 10px;
+
+    }
+
+    .input {
+        height: 45px;
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        outline: none;
+        margin-bottom: 20px;
+        color: #40414a;
+    }
+
+    .input-box .input-field label {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .input-field .input:focus~label {
+        top: -10px;
+        font-size: 13px;
+    }
+
+    .input-field .input:valid~label {
+        top: -10px;
+        font-size: 13px;
+        color: #5d5076;
+    }
+
+    .input-field .input:focus,
+    .input-field .input:valid {
+        border-bottom: 1px solid purple;
+    }
+
+    .submit {
+        width: 100%;
+        border: none;
+        outline: none;
+        height: 40px;
+        background: purple;
+        color: #fff;
+        border-radius: 5px;
+        transition: .5s ease-in-out;
+        font-weight: 500;
+    }
+
+    .submit:hover {
+        background: linear-gradient(to right, #8290de, rgb(188, 34, 188));
+        color: #fff;
+        cursor: pointer;
+        border: 0;
+    }
+
+    .submit:active {
+        transform: scale(0.85);
+    }
+
+    .signin {
+        text-align: center;
+        font-size: small;
+        margin: 10px auto;
+    }
+
+    .signin button {
+        border: none;
+        background: none;
+        text-decoration: none;
+        font-weight: 700;
+        color: #000;
+        transition: .5s;
+    }
+
+    .signin button:hover {
+        text-decoration: underline;
+        color: #000;
+    }
+
+    @media only screen and (max-width:768px) {
+        .form-row {
+            height: auto;
+        }
+
+        .side-context {
+            border-radius: 10px 10px 0 0;
+            height: 200px;
+        }
+
+        .row {
+            max-width: 420px;
+            width: 100%;
+        }
+
+        .side-context-text h1 {
+            font-size: 32px;
+        }
+
+        .input-box {
+            width: auto;
+        }
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand d-flex justify-content-between align-items-center order-lg-0">
+                <img src="./image/logo.png" alt="">
+            </a>
+            <div class="order-lg-2 d-flex">
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" href="./register.html"><i class="bi bi-person-fill"></i></a>
+                    <span class="position-absolute top-0 start-100 translate-middle badge"></span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" href="./wishlist.html"><i class="bi bi-heart"></i></i></a>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="bi bi-cart-fill" id="cart-icon" data-quantity="0"></i>
+                    <div class="cart">
+                        <h2 class="cart-title">Your Cart</h2>
+                        <!-- Content -->
+                        <div class="cart-content"></div>
+                        <!-- Total -->
+                        <div class="total">
+                            <div class="total-title">Total:</div>
+                            <div class="total-price">$0</div>
+                        </div>
+                        <a href="./register.html" class="text-decoration-none">
+                            <div type="button" class="btn-buy">Pay Now</div>
+                        </a>
+                        <i class="bi bi-x" id="close-cart"></i>
+
+                    </div>
+
+                </button>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item dropdown dropdown-mega position-static">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                            Apparel
+                        </a>
+                        <div class="dropdown-menu shadow">
+                            <div class="mega-content px-md-4">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./men.html" class="apparel-title">Men's Collections</a>
+                                            <div class="list-group">
+                                                <a href="./men.html" class="list-group-item">Top Wear</a>
+                                                <a href="./men.html" class="list-group-item">Bottom Wear</a>
+                                                <a href="./men.html" class="list-group-item">Fashion Accessories</a>
+                                                <a href="./men.html" class="list-group-item">Indian & Festive Wear</a>
+                                                <a href="./men.html" class="list-group-item">Inner wear & Sleep Wear</a>
+                                                <a href="./men.html" class="list-group-item">Personal care &
+                                                    Grooming</a>
+                                                <a href="./men.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./women.html" class="apparel-title">Women Collections</a>
+                                            <div class="list-group">
+                                                <a href="./women.html" class="list-group-item">Indian & Fushion Wear</a>
+                                                <a href="./women.html" class="list-group-item">Western Wear</a>
+                                                <a href="./women.html" class="list-group-item">Maternity</a>
+                                                <a href="./women.html" class="list-group-item">Lingerie & Sleepover</a>
+                                                <a href="./women.html" class="list-group-item">Beauty & Personal
+                                                    Care</a>
+                                                <a href="./women.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./kids.html" class="apparel-title">Kids Collections</a>
+                                            <div class="list-group">
+                                                <a href="./kids.html" class="list-group-item">Boys Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Girls Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Infants</a>
+                                                <a href="./kids.html" class="list-group-item">Kids Accessories</a>
+                                                <a href="./kids.html" class="list-group-item">Toys</a>
+                                                <a href="./kids.html" class="list-group-item">Home & Bath</a>
+                                                <a href="./kids.html" class="list-group-item">Personal Care</a>
+                                                <a href="./kids.html" class="list-group-item">Foot Wear</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./lifestyle.html">Lifestyle</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./mobile.html">Mobiles</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./appliances.html">Appliances</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./Electronics.html">Electronics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- REGISTER -->
+    <main id="register" style="display: none;">
+        <div class="wrapper">
+            <div class="container main mt-5" id="container">
+                <div class="row form-row">
+                    <div class="col-md-6 side-context ">
+
+                        <div class="side-context-text">
+                            <h1 class="signin-text mt-2">Hello, Friend!</h1>
+                            <p class="text-center">Register with your personal details to use all of site features</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6  login-info">
+                        <form id="SignUpUser">
+                            <div class="input-box">
+                                <header>Create account</header>
+                                <div class="input-field">
+                                    <input type="text" class="input" id="username" required>
+                                    <label for="username">Username</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="number" class="input" id="phoneNumber" required>
+                                    <label for="phoneNumber">Phone number</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="email" class="input" id="email" name="email" required>
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" class="input" id="password" required>
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="input-field">
+                                    <button class="submit" id="signupbtn">Sign Up</button>
+                                </div>
+                                <div class="signin">
+                                    <span>Already have an account? <button id="loginbtn">Log in
+                                            here</button></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- LOGIN -->
+    <main id="login">
+        <div class="wrapper">
+            <div class="container main mt-5" id="container">
+                <div class="row form-row">
+                    <div class="col-md-6 side-context ">
+
+                        <div class="side-context-text">
+                            <h1 class="signin-text">Welcome Back!</h1>
+                            <p class="text-center">Enter your personal details to use all of site features</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6  login-info">
+                        <form id="SignUpUser">
+                            <div class="input-box">
+                                <header>Log in your Account</header>
+                                <div class="input-field">
+                                    <input type="email" class="input" id="loginemail" name="email" required>
+                                    <label for="email">Email</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" class="input" id="loginpassword" name="password" required>
+                                    <label for="password">Password</label>
+                                </div>
+                                <div class="input-field">
+                                    <button class="submit" id="signinbtn">Sign In</button>
+                                </div>
+                                <div class="signup signin">
+                                    <span>Already have an account? <button id="registerbtn">register
+                                            here</button></span>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- FOOTER  -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <a href="./index.html" class="logo"><img src="./image/logo.png" alt=""></a>
+
+                <div class="col">
+                    <h4>Contact</h4>
+                    <p><strong>Address:</strong>XYZ</p>
+                    <p><strong>Phone:</strong>2345678</p>
+                    <p><strong>Hours:</strong>xyz</p>
+                    <div class="follow">
+                        <h4>Follow Us</h4>
+                        <div class="icon">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>About</h4>
+                    <a href=""> About Us</a>
+                    <a href="">Delivery Information</a>
+                    <a href="">Privacy Policy</a>
+                    <a href="">Terms & Conditions</a>
+                    <a href="">Contact Us</a>
+                </div>
+                <div class="col">
+                    <h4>My Account</h4>
+                    <a href="">Sign in</a>
+                    <a href="">View Cart</a>
+                    <a href="">My Wishlist</a>
+                    <a href="">Track My Order</a>
+                </div>
+                <div class="col">
+                    <h4>Help</h4>
+                    <a href="">Payments</a>
+                    <a href="">Shipping</a>
+                    <a href="">Cancellations & Returns</a>
+                    <a href="">FAQ</a>
+                    <a href="">Report Infringement</a>
+                </div>
+                <div class="col">
+                    <h4>Policy</h4>
+                    <a href="">Return Policy</a>
+                    <a href="">Terms of Use</a>
+                    <a href="">Security</a>
+                    <a href="">Privacy</a>
+                </div>
+                <div class="col">
+                    <h4>Install App</h4>
+                    <p>Free App Store or Google Play</p>
+                    <div class="app">
+                        <img src="./image/app1.png " alt="">
+                    </div>
+                    <p>Secured Payment Gateways</p>
+                    <img src="./image/pay.png" class="pay" alt="">
+                </div>
+                <div class="copyright">
+                    <p class=" text-align-center">© 2023 Merci.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/Javascript">
+        function preventBack() { window.history.forward() };
+            setTimeout("preventBack()", 0);
+            window.onunload = function () { null };
+            </script>
+    <script src="1JS/index.js"></script>
+    <script src="1JS/jquery-3.6.4.min.js"></script>
+    <script src="1JS/slick.min.js"></script>
+    <script src="1JS/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <script>
+        const registerbtn = document.getElementById('registerbtn');
+        const loginbtn = document.getElementById('loginbtn');
+        const register = document.getElementById('register');
+        const login = document.getElementById('login');
+
+        registerbtn.addEventListener('click', function () {
+            login.style.display = "none";
+            register.style.display = "block";
+        })
+        loginbtn.addEventListener('click', function () {
+            login.style.display = "block";
+            register.style.display = "none";
+        })
+    </script>
+
+    <script type="module">
+
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+        import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-firestore.js";
+
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+            apiKey: "AIzaSyC7Gw1GRBOAGTxVOeG3uYALVPSEmsyqAQA",
+            authDomain: "merci-login-signup.firebaseapp.com",
+            projectId: "merci-login-signup",
+            storageBucket: "merci-login-signup.appspot.com",
+            messagingSenderId: "108670889583",
+            appId: "1:108670889583:web:cdd4a7983a6e4ddea4a79a"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+
+        const signUp = document.getElementById("signupbtn");
+        signUp.addEventListener("click", (event) => {
+            event.preventDefault();
+            const email = document.getElementById("email").value;
+            const password = document.getElementById("password").value;
+            const username = document.getElementById("username").value;
+            const phonenumber = document.getElementById("phoneNumber").value;
+
+            const auth = getAuth();
+            const db = getFirestore();
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    const user = userCredential.user;
+                    const userData = {
+                        email: email,
+                        username: username,
+                        phoneNumber: phonenumber,
+                        password: password
+                    };
+                    alert("acccount created successfully!");
+                    const docRef = doc(db, "users", user.uid);
+                    setDoc(docRef, userData)
+                        .then(() => {
+                            window.location.href = 'register.html';
+                        })
+                        .catch((error) => {
+                            console.log(error);
+                            console.log("error writing document", error)
+                        })
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    if (errorCode == 'auth/email-already Exists!!!') {
+                        alert("email already exists");
+                    }
+                    else {
+                        alert("error creating account");
+                    }
+                })
+        })
+
+        const signIn = document.getElementById("signinbtn");
+        signIn.addEventListener("click", (event) => {
+            event.preventDefault();
+            const email = document.getElementById("loginemail").value;
+            const password = document.getElementById("loginpassword").value;
+            const auth = getAuth(app);
+
+
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    alert("login is Successfull!!!");
+                    const user = userCredential.user;
+                    localStorage.setItem("loggedInUserId", user.uid);
+                    window.location.href = "payment.html";
+                })
+                .catch((error) => {
+                    const errorCode = error.code;
+                    if (errorCode == "auth/invalid-credential") {
+                        alert("Invalid Email or Password");
+                    }
+                    else {
+                        alert("Account does not exist!");
+                    }
+                })
+        })
+    </script>
+    </script>
+</body>
+
+</html>

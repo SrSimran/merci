@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merci</title>
+    <!-- bootstrap 5 CDN link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- bootstrap icon CDN link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <!-- Navbar Jquery cdn  -->
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <!-- SLICK SLIDER Jquery CSS -->
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick.css">
+    <link rel="stylesheet" type="text/CSS" href="1CSS/slick-theme.css">
+    <!-- OWL CAROUSEL CSS -->
+    <link rel="stylesheet" href="1CSS/owl.carousel.min.css">
+    <link rel="stylesheet" href="1CSS/owl.theme.green.min.css">
+    <link rel="stylesheet" href="./1CSS/index.css">
+</head>
+
+<body>
+    <!-- ==========NAVIGATION=========== -->
+    <nav class="navbar navbar-expand-lg bg-white fixed-top">
+        <div class="container">
+            <a href="./index.html" class="navbar-brand d-flex justify-content-between align-items-center order-lg-0">
+                <img src="./image/logo.png" alt="">
+            </a>
+            <div class="order-lg-2 d-flex">
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" href="./register.html"><i class="bi bi-person-fill"></i></a>
+                    <span class="position-absolute top-0 start-100 translate-middle badge"></span>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <a class="nav-link p-0" href="./wishlist.html"><i class="bi bi-heart"></i></i></a>
+                </button>
+                <button type="button" class="btn position-relative">
+                    <i class="bi bi-cart-fill" id="cart-icon" data-quantity="0"></i>
+                    <div class="cart">
+                        <h2 class="cart-title">Your Cart</h2>
+                        <!-- Content -->
+                        <div class="cart-content"></div>
+                        <!-- Total -->
+                        <div class="total">
+                            <div class="total-title">Total:</div>
+                            <div class="total-price">$0</div>
+                        </div>
+                        <a href="./register.html" class="text-decoration-none">
+                            <div type="button" class="btn-buy">Pay Now</div>
+                        </a>
+                        <i class="bi bi-x" id="close-cart"></i>
+
+                    </div>
+
+                </button>
+
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <i class="bi bi-list navbar-toggler-icon"></i>
+            </button>
+            <div class="collapse navbar-collapse order-lg-1" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0 text-center">
+                    <li class="nav-item dropdown dropdown-mega position-static">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false" data-bs-auto-close="outside">
+                            Apparel
+                        </a>
+                        <div class="dropdown-menu shadow">
+                            <div class="mega-content px-md-4">
+                                <div class="container-fluid">
+                                    <div class="row">
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./men.html" class="apparel-title">Men's Collections</a>
+                                            <div class="list-group">
+                                                <a href="./men.html" class="list-group-item">Top Wear</a>
+                                                <a href="./men.html" class="list-group-item">Bottom Wear</a>
+                                                <a href="./men.html" class="list-group-item">Fashion Accessories</a>
+                                                <a href="./men.html" class="list-group-item">Indian & Festive Wear</a>
+                                                <a href="./men.html" class="list-group-item">Inner wear & Sleep Wear</a>
+                                                <a href="./men.html" class="list-group-item">Personal care &
+                                                    Grooming</a>
+                                                <a href="./men.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./men.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./women.html" class="apparel-title">Women Collections</a>
+                                            <div class="list-group">
+                                                <a href="./women.html" class="list-group-item">Indian & Fushion Wear</a>
+                                                <a href="./women.html" class="list-group-item">Western Wear</a>
+                                                <a href="./women.html" class="list-group-item">Maternity</a>
+                                                <a href="./women.html" class="list-group-item">Lingerie & Sleepover</a>
+                                                <a href="./women.html" class="list-group-item">Beauty & Personal
+                                                    Care</a>
+                                                <a href="./women.html" class="list-group-item">Foot Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sport & Active Wear</a>
+                                                <a href="./women.html" class="list-group-item">Sunglasses & Frames</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-lg-4 col-sm-6 py-4 px-xl-3 px-4">
+                                            <a href="./kids.html" class="apparel-title">Kids Collections</a>
+                                            <div class="list-group">
+                                                <a href="./kids.html" class="list-group-item">Boys Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Girls Clothing</a>
+                                                <a href="./kids.html" class="list-group-item">Infants</a>
+                                                <a href="./kids.html" class="list-group-item">Kids Accessories</a>
+                                                <a href="./kids.html" class="list-group-item">Toys</a>
+                                                <a href="./kids.html" class="list-group-item">Home & Bath</a>
+                                                <a href="./kids.html" class="list-group-item">Personal Care</a>
+                                                <a href="./kids.html" class="list-group-item">Foot Wear</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./lifestyle.html">Lifestyle</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="./mobile.html">Mobiles</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./appliances.html">Appliances</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./Electronics.html">Electronics</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- ==================AboutUS ===============-->
+    <section class="aboutUs-section2 mt-5 pt-5">
+        <div class="container d-flex justify-content-around align-items-center aboutUs-container">
+            <div class=" aboutUs-herocontent">
+                <h5 class="abouttext-head">Welcome to our Website</h5>
+                <p class="abouttext-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem
+                    veritatis
+                    error itaque eaque
+                    deserunt cum ipsa quibusdam corporis optio mollitia iusto voluptas quos ducimus, tenetur molestiae
+                    laboriosam recusandae vel consequatur quis fugiat repellendus magni. Sequi, beatae? Vero, odio.
+                    Soluta
+                    sint eos non esse at reprehenderit ducimus qui quasi eius iure!</p>
+            </div>
+            <div class="aboutUs-imagecontent">
+                <img src="./image/aboutus-img.png" alt="" class="about-image">
+            </div>
+        </div>
+    </section>
+    <section id="policies">
+        <div class="container-fluid policy-container">
+            <h2 class="policies-heading">
+                DELIVERY INFORMATION
+            </h2>
+            <p class="policies-pargraph">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est dolore autem eum alias omnis id quaerat
+                officia fugit, consequuntur, exercitationem recusandae neque, similique hic quam quasi quia. Dolores
+                delectus dolor exercitationem nam quos necessitatibus quaerat itaque? Accusamus iusto tenetur,
+                exercitationem optio enim officiis quis incidunt beatae sed architecto, tempore magnam! Lorem ipsum
+                dolor sit amet consectetur adipisicing elit. Ea officiis omnis nobis magnam eum numquam. Vitae dolorem
+                iste eos, recusandae enim esse, perferendis vero nam fugiat possimus quidem iure natus libero tempore,
+                iusto eum atque architecto consectetur ipsa cumque a.
+            </p>
+            <h2 class="policies-heading">
+                PRIVACY POLICY
+            </h2>
+            <p class="policies-pargraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia temporibus nesciunt adipisci. Nulla
+                repellendus nihil reprehenderit nam et omnis in necessitatibus ratione aliquam tempora voluptatem illo
+                dignissimos architecto eveniet fuga consequatur itaque eos porro suscipit recusandae officiis dolor,
+                explicabo iste! A, labore rem temporibus ex placeat minus suscipit nemo, quos id vitae consectetur
+                molestias cum earum doloribus veniam odit. Possimus!
+            </p>
+            <h2 class="policies-heading">
+                TERMS OF USE
+            </h2>
+            <p class="policies-pargraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, dignissimos repudiandae obcaecati
+                cupiditate, eligendi possimus minus maxime reprehenderit quasi nesciunt perspiciatis ducimus similique!
+                Debitis quidem ut error cupiditate nobis illum non repudiandae maxime aliquid sit, impedit, enim velit
+                autem aliquam corporis accusantium rerum, architecto quisquam natus temporibus commodi! Qui, doloremque.
+            </p>
+            <h2 class="policies-heading">
+                SECURITY
+            </h2>
+            <p class="policies-pargraph">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis voluptas labore id quibusdam,
+                consequatur veritatis autem deleniti qui veniam architecto deserunt at minus odio esse recusandae
+                aliquid voluptatibus assumenda illum aliquam sapiente est. Aperiam repudiandae perferendis accusantium
+                temporibus. Dolorum facilis animi earum esse. Optio eum dicta culpa ut id quis.
+            </p>
+        </div>
+    </section>
+    <!-- ---------------FOOTER SECTION--------------------------->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <a href="./index.html" class="logo"><img src="./image/logo.png" alt=""></a>
+
+                <div class="col">
+                    <h4>Contact</h4>
+                    <p><strong>Address:</strong>XYZ</p>
+                    <p><strong>Phone:</strong>2345678</p>
+                    <p><strong>Hours:</strong>xyz</p>
+                    <div class="follow">
+                        <h4>Follow Us</h4>
+                        <div class="icon">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-twitter"></i>
+                            <i class="bi bi-whatsapp"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>About</h4>
+                    <a href="./aboutUs.html"> About Us</a>
+                    <a href="./aboutUs.html">Delivery Information</a>
+                    <a href="./aboutUs.html">Privacy Policy</a>
+                    <a href="./aboutUs.html">Terms & Conditions</a>
+                    <a href="./contactus.html">Contact Us</a>
+                </div>
+                <div class="col">
+                    <h4>My Account</h4>
+                    <a href="./register.html">Sign in</a>
+                    <p id="viewCart">View Cart</p>
+                    <a href="">My Wishlist</a>
+                    <a href="">Track My Order</a>
+                </div>
+                <div class="col">
+                    <h4>Help</h4>
+                    <a href="./help.html">Payments</a>
+                    <a href="./help.html">Shipping</a>
+                    <a href="./help.html">Cancellations & Returns</a>
+                    <a href="./help.html">FAQ</a>
+                    <a href="./help.html">Report Infringement</a>
+                </div>
+                <div class="col">
+                    <h4>Install App</h4>
+                    <p>Free App Store or Google Play</p>
+                    <div class="app">
+                        <img src="./image/app1.png " alt="">
+                    </div>
+                    <p>Secured Payment Gateways</p>
+                    <img src="./image/pay.png" class="pay" alt="">
+                </div>
+                <div class="copyright">
+                    <p class=" text-align-center">© 2023 Merci.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- -------------------------JS FILEs --------------------->
+    <script src="./1JS/index.js"></script>
+    <script src="1JS/jquery-3.6.4.min.js"></script>
+    <script src="1JS/slick.min.js"></script>
+    <script src="1JS/owl.carousel.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <!-- Slick Slider Jquery file-->
+</body>
+
+</html>
